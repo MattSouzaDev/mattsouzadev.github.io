@@ -5,86 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        /* Add a gray background color with some padding */
-        body {
-            font-family: Arial;
-            padding: 20px;
-            background: #f1f1f1;
-        }
-
-        /* Header/Blog Title */
-        .header {
-            padding: 40px;
-            font-size: 40px;
-            text-align: center;
-            background: white;
-        }
-
-        /* Create two unequal columns that floats next to each other */
-        /* Left column */
-        .leftcolumn {
-            float: left;
-            width: 75%;
-        }
-
-        /* Right column */
-        .rightcolumn {
-            float: left;
-            width: 25%;
-            padding-left: 20px;
-        }
-
-        /* Fake image */
-        .fakeimg {
-            background-color: #aaa;
-            width: 100%;
-            padding: 20px;
-        }
-
-        /* Add a card effect for articles */
-        .card {
-            background-color: white;
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Footer */
-        .footer {
-            padding: 20px;
-            text-align: center;
-            background: #ddd;
-            margin-top: 20px;
-        }
-
-        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 800px) {
-
-            .leftcolumn,
-            .rightcolumn {
-                width: 100%;
-                padding: 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
 
-    <div class="header">
-        <h2>Hello Friend</h2>
-        <h3>I'm Matheus Souza</h3>
+    <div class="bgimg-1">
+        <span id="h1-header">Hello Friend</span>
     </div>
 
     <div class="row">
@@ -92,17 +19,39 @@
             <div class="card">
                 <h2>TITLE HEADING</h2>
                 <h5>Title description, Dec 7, 2017</h5>
-                <div class="fakeimg" style="height:200px;">Image</div>
-                <p>Some text..</p>
-                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco.</p>
+                <section class="text-container">
+                    <h3>Mr Robot </h3>
+                    <div class="paragraph-container">
+                        <p>
+                            Elliot Alderson spricht zu einem imaginären Freund und schildert ihm seine Wahrnehmung. Er
+                            lebt
+                            isoliert von der Außenwelt, hat eine dissoziative Identitätsstörung und leidet unter
+                            schweren
+                            Angstzuständen, die er durch den Konsum von Morphin zu verdrängen versucht. In seiner
+                            Freizeit
+                            hackt Elliot die Daten und Rechner seiner Mitmenschen. Dies rechtfertigt er damit, dass er
+                            sie
+                            vor Bedrohungen schützt. Als Angestellter des IT-Sicherheitsunternehmens Allsafe
+                            Cybersecurity
+                            in New York ist er für den Schutz des größten Konglomerats der Welt, E Corp (von Elliot
+                            stets
+                            Evil Corp genannt), zuständig. Diesen Job verdankt er Angela Moss, mit der er seit seiner
+                            Kindheit befreundet ist. Sie lernten sich kennen, da sowohl Elliots Vater, welcher in
+                            Elliots
+                            Kindheit sein einziger Freund war, als auch Angelas Mutter an Leukämie erkrankten und später
+                            starben, nachdem sie Giftmüll ausgesetzt waren. Obwohl es Hinweise darauf gab, dass E Corp
+                            die
+                            Gefährdung von Menschenleben durch den Giftmüll bekannt war, scheiterten bislang sämtliche
+                            Bemühungen der Angehörigen, gerichtlich gegen E Corp vorzugehen.
+                        </p>
+
+                    </div>
+                </section>
             </div>
             <div class="card">
                 <h2>TITLE HEADING</h2>
                 <h5>Title description, Sep 2, 2017</h5>
-                <div class="fakeimg" style="height:200px;">Image</div>
-                <p>Some text..</p>
+                <div class="bgimg-2"></div>
                 <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                     exercitation ullamco.</p>
@@ -127,10 +76,19 @@
         </div>
     </div>
 
-    <div class="footer">
-        <h2>Footer</h2>
+    <div class="bgimg-1">
     </div>
 
+
+    <div style="position:relative;">
+        <div class="footer">
+            <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+        </div>
+    </div>
+
+
+
+    <script src="index.js"></script>
 </body>
 
 </html>

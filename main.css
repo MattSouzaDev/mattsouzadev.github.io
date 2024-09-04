@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    color: #F9EFC1;
+    font-family: Arial;
+    background: #141422;
+}
+
+
+.bgimg-1,
+.bgimg-2 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.bgimg-1 {
+    background-image: url("img_parallax.jpg");
+    min-height: 60%;
+}
+
+.bgimg-2 {
+    background-image: url("img_parallax2.jpg");
+    min-height: 300px;
+}
+
+span#h1-header {
+    padding: 40px;
+    min-height: 40%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #141422;
+    font-size: 35px;
+    letter-spacing: 10px;
+    transition: 0.2s;
+}
+
+h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: #111;
+}
+
+.text-container {
+    margin: auto;
+    max-width: 800px;
+    width: 80%;
+}
+
+.paragraph-container {
+    color: #111;
+    background-color: white;
+    text-align: center;
+    padding: 50px 80px;
+    text-align: justify;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    color: #111;
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    color: #111;
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+    color: #111;
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    color: #ddd;
+    background-color: #282E34;
+    text-align: center;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
