@@ -11,6 +11,75 @@ html {
     background: #141422;
 }
 
+/* Create a sticky/fixed navbar */
+#navbar {
+    overflow: hidden;
+    padding: 90px 10px;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    min-height: 35%;
+    position: absolute;
+    text-align: center;
+    background-color: #141422;
+    box-shadow: 0 0 30px 40px #141422;
+    font-size: 35px;
+    letter-spacing: 5px;
+    transition: 0.2s;
+}
+
+/* Style the navbar links */
+#navbar a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+/* Style the logo */
+#navbar #logo {
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+/* Links on mouse-over */
+#navbar a:hover {
+    background-color: rgba(157, 4, 4, 0.3);
+    color: black;
+}
+
+/* Style the active/current link */
+#navbar a.active {
+    background-color: rgba(157, 4, 4, 0.7);
+    color: white;
+}
+
+/* Display some links to the right */
+#navbar-right {
+    float: right;
+}
+
+/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 580px) {
+    #navbar {
+        padding: 20px 10px !important;
+        /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+    }
+
+    #navbar a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    #navbar-right {
+        float: none;
+    }
+}
 
 .bgimg-1,
 .bgimg-2 {
@@ -24,8 +93,8 @@ html {
 }
 
 .bgimg-1 {
-    background-image: url("img_parallax.jpg");
-    min-height: 60%;
+    background-image: url("bg_img.jpg");
+    min-height: 65%;
 }
 
 .bgimg-2 {
@@ -33,24 +102,56 @@ html {
     min-height: 300px;
 }
 
-span#h1-header {
-    padding: 40px;
-    min-height: 40%;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    background-color: #141422;
-    font-size: 35px;
-    letter-spacing: 10px;
-    transition: 0.2s;
-}
-
 h3 {
     letter-spacing: 5px;
     text-transform: uppercase;
     font: 20px "Lato", sans-serif;
-    color: #111;
+}
+
+.flip-card {
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    border-radius: 15%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    border-radius: 15%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+}
+
+.flip-card-back {
+    border-radius: 15%;
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+img {
+    border-radius: 15%;
 }
 
 .text-container {
@@ -60,24 +161,25 @@ h3 {
 }
 
 .paragraph-container {
-    color: #111;
-    background-color: white;
+    transition: transform .2s;
     text-align: center;
     padding: 50px 80px;
     text-align: justify;
 }
 
+.paragraph-container:hover {
+    transform: scale(1.1);
+}
+
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {
-    color: #111;
     float: left;
     width: 75%;
 }
 
 /* Right column */
 .rightcolumn {
-    color: #111;
     float: left;
     width: 25%;
     padding-left: 20px;
@@ -92,8 +194,6 @@ h3 {
 
 /* Add a card effect for articles */
 .card {
-    color: #111;
-    background-color: white;
     padding: 20px;
     margin-top: 20px;
 }
@@ -107,11 +207,10 @@ h3 {
 
 /* Footer */
 .footer {
+    box-shadow: 0 0 20px 30px #141422;
     padding: 20px;
     text-align: center;
     margin-top: 20px;
-    color: #ddd;
-    background-color: #282E34;
     text-align: center;
 }
 
