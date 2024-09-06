@@ -6,23 +6,22 @@ body,
 html {
     height: 100%;
     margin: 0;
-    color: #F9EFC1;
+    color: #ffffffce;
     font-family: Arial;
-    background: #141422;
+    background: #1f1f1f;
 }
 
 /* Create a sticky/fixed navbar */
 #navbar {
     overflow: hidden;
-    padding: 90px 10px;
+    padding: 60px 10px;
     width: 100%;
     top: 0;
     z-index: 99;
-    min-height: 35%;
     position: absolute;
     text-align: center;
-    background-color: #141422;
-    box-shadow: 0 0 30px 40px #141422;
+    background-color:#1f1f1f;
+    box-shadow: 0 0 30px 40px #1f1f1f;
     font-size: 35px;
     letter-spacing: 5px;
     transition: 0.2s;
@@ -41,21 +40,21 @@ html {
 
 /* Style the logo */
 #navbar #logo {
-    font-size: 35px;
-    font-weight: bold;
+    width: 30%;
     transition: 0.4s;
 }
 
 /* Links on mouse-over */
 #navbar a:hover {
-    background-color: rgba(157, 4, 4, 0.3);
-    color: black;
+    background-color:black;
+    color: #ffffffce;
 }
 
 /* Style the active/current link */
 #navbar a.active {
-    background-color: rgba(157, 4, 4, 0.7);
-    color: white;
+    background-color: rgb(171, 0, 0);
+    font-weight: bold;
+    color: black;
 }
 
 /* Display some links to the right */
@@ -187,7 +186,7 @@ img {
 
 /* Fake image */
 .fakeimg {
-    background-color: #aaa;
+    background-color:#1f1f1f;
     width: 100%;
     padding: 20px;
 }
@@ -207,7 +206,7 @@ img {
 
 /* Footer */
 .footer {
-    box-shadow: 0 0 20px 30px #141422;
+    box-shadow: 0 0 20px 30px #1f1f1f;
     padding: 20px;
     text-align: center;
     margin-top: 20px;
