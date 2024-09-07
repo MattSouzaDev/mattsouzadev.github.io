@@ -1,3 +1,14 @@
+:root  {
+    /* variaveis para cores */
+    --firstColor: #1f1f1f;
+    --secondColor: #000000;
+    --thirdColor:  #ab0000;
+    --fourthColor: #ffffffce;
+    --shadow-color: 0 0 30px 40px #1f1f1f;
+
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -6,22 +17,21 @@ body,
 html {
     height: 100%;
     margin: 0;
-    color: #ffffffce;
+    color: var(--fourthColor);
     font-family: Arial;
-    background: #1f1f1f;
+    background: var(--firstColor);
 }
 
 /* Create a sticky/fixed navbar */
 #navbar {
     overflow: hidden;
-    padding: 60px 10px;
     width: 100%;
     top: 0;
     z-index: 99;
     position: absolute;
     text-align: center;
-    background-color:#1f1f1f;
-    box-shadow: 0 0 30px 40px #1f1f1f;
+    background-color: var(--firstColor);
+    box-shadow: var(--shadow-color);
     font-size: 35px;
     letter-spacing: 5px;
     transition: 0.2s;
@@ -31,6 +41,8 @@ html {
 #navbar a {
     float: left;
     text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
     padding: 12px;
     text-decoration: none;
     font-size: 18px;
@@ -46,15 +58,8 @@ html {
 
 /* Links on mouse-over */
 #navbar a:hover {
-    background-color:black;
-    color: #ffffffce;
-}
-
-/* Style the active/current link */
-#navbar a.active {
-    background-color: rgb(171, 0, 0);
-    font-weight: bold;
-    color: black;
+    background-color: var(--secondColor);
+    color: var(--fourthColor);
 }
 
 /* Display some links to the right */
@@ -66,7 +71,6 @@ html {
 @media screen and (max-width: 580px) {
     #navbar {
         padding: 20px 10px !important;
-        /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
     }
 
     #navbar a {
@@ -93,7 +97,7 @@ html {
 
 .bgimg-1 {
     background-image: url("bg_img.jpg");
-    min-height: 65%;
+    min-height: 75%;
 }
 
 .bgimg-2 {
@@ -121,7 +125,7 @@ h3 {
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 3px 6px 8px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 6px 8px 0px var(--secundary-bg);
 }
 
 .flip-card:hover .flip-card-inner {
@@ -199,6 +203,7 @@ img {
 
 /* Clear floats after the columns */
 .row:after {
+    box-shadow: var(--shadow-color) ;
     content: "";
     display: table;
     clear: both;
