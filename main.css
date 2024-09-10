@@ -27,28 +27,34 @@ html {
 #navbar {
     overflow: hidden;
     width: 100%;
-    top: 0;
+    top: 10px;
     z-index: 99;
     position: absolute;
     text-align: center;
     background-color: var(--firstColor);
     box-shadow: var(--shadow-color);
-    font-size: 35px;
     letter-spacing: 5px;
     transition: 0.2s;
 }
 
-/* Style the navbar links */
-#navbar a {
+.navbarShrink {
     float: left;
-    text-align: center;
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Style the navbar links */
+.nava {
+    float: left;
     text-transform: uppercase;
     font-weight: bold;
     padding: 12px;
     text-decoration: none;
     font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
 }
 
 /* Style the logo */
@@ -113,7 +119,8 @@ html {
 }
 
 
-h2, h3 {
+h2,
+h3 {
     text-align: center;
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -258,7 +265,7 @@ a {
 /* Clear floats after the columns */
 
 /* Footer */
-.footer {
+#footer {
     box-shadow: var(--shadow-color);
     padding: 20px;
     text-align: center;

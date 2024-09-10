@@ -1,23 +1,29 @@
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () { scrollFunction() };
+
+const item1 = document.getElementById("item1")
+const item2 = document.getElementById("item2")
+const item3 = document.getElementById("item3")
 
 function scrollFunction() {
+
   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-    document.getElementById("navbar").style.padding = "3px 3px";
+    item1.classList.remove('nava')
+    item2.classList.remove('nava')
+    item3.classList.remove('nava')
+    item1.classList.add('navbarShrink')
+    item2.classList.add('navbarShrink')
+    item3.classList.add('navbarShrink')
+    
+
     document.getElementById("logo").style.width = "20%";
   } else {
-    document.getElementById("navbar").style.padding = "20px 10px";
+    item1.classList.remove('navbarShrink')
+    item2.classList.remove('navbarShrink')
+    item3.classList.remove('navbarShrink')
+    item1.classList.add('nava')
+    item2.classList.add('nava')
+    item3.classList.add('nava')
+    
     document.getElementById("logo").style.width = "30%";
   }
 }
-
-const goToTop = document.getElementById("go-to-top");
-const goToBottom = document.getElementById("go-to-bottom");
-const goToContacts = document.getElementById("go-to-contacts")
-
-goToBottom.addEventListener("click", () => {
-    goToTop.scrollIntoView({ behavior: "smooth", block: "end" });
-});
-goToTop.addEventListener("click", () => {
-    goToBottom.scrollIntoView({ behavior: "smooth", block: "start" });
-});
-
