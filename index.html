@@ -13,21 +13,20 @@
     <div id="navbar">
         <img id="logo" src="Mr_img.png" alt="Logo image">
         <div id="navbar-right">
-          <a id="go-to-bottom"><i class="fa fa-arrow-down"></i> Go down</a>
-          <a >Contact</a>
-          <a >About</a>
+            <a id="go-to-bottom"><i class="fa fa-arrow-down"></i> Go down</a>
+            <a href="#contact-card" id="go-to-contacts"> <i class="fa fa-address-book"></i> Contact</a>
+            <a href="#aboutme"><i class="fa fa-user"></i> About</a>
         </div>
-      </div>
-
-    <div class="bgimg-1">
-        <span id="h1-header">Hello Friend</span>
     </div>
 
-    <div class="row">
+    <div class="bgimg-1">
+        <span id="h1-header"></span>
+    </div>
+
+    <div class="row" id="rowid">
         <div class="leftcolumn">
-            <div class="card">
-                <h2>Mr Robot</h2>
-                <h5>Title description, Dec 7, 2017</h5>
+            <div class="card" id="aboutme">
+                <h2> About me</h2>
                 <section class="text-container">
                     <div class="paragraph-container">
                         <p>
@@ -41,16 +40,7 @@
                             sie
                             vor Bedrohungen schützt. Als Angestellter des IT-Sicherheitsunternehmens Allsafe
                             Cybersecurity
-                            in New York ist er für den Schutz des größten Konglomerats der Welt, E Corp (von Elliot
-                            stets
-                            Evil Corp genannt), zuständig. Diesen Job verdankt er Angela Moss, mit der er seit seiner
-                            Kindheit befreundet ist. Sie lernten sich kennen, da sowohl Elliots Vater, welcher in
-                            Elliots
-                            Kindheit sein einziger Freund war, als auch Angelas Mutter an Leukämie erkrankten und später
-                            starben, nachdem sie Giftmüll ausgesetzt waren. Obwohl es Hinweise darauf gab, dass E Corp
-                            die
-                            Gefährdung von Menschenleben durch den Giftmüll bekannt war, scheiterten bislang sämtliche
-                            Bemühungen der Angehörigen, gerichtlich gegen E Corp vorzugehen.
+                            in New York ist er für den Schutz des größten Konglomerats der Welt, E Corp.
                         </p>
 
                     </div>
@@ -60,15 +50,25 @@
                 <h2>TITLE HEADING</h2>
                 <h5>Title description, Sep 2, 2017</h5>
                 <div class="bgimg-2"></div>
-                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco.</p>
+                <p>HTML</p>
+                <div class="container">
+                    <div class="skills html">90%</div>
+                </div>
+
+                <p>CSS</p>
+                <div class="container">
+                    <div class="skills css">80%</div>
+                </div>
+
+                <p>JavaScript</p>
+                <div class="container">
+                    <div class="skills js">65%</div>
+                </div>
+
             </div>
         </div>
         <div class="rightcolumn">
             <div class="card">
-
-                <h2>About Me</h2>
 
                 <div class="flip-card">
                     <div class="flip-card-inner">
@@ -84,16 +84,24 @@
 
                 <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
             </div>
-            <div class="card">
-                <h3>Popular Post</h3>
-                <div class="fakeimg">Image</div><br>
-                <div class="fakeimg">Image</div><br>
-                <div class="fakeimg">Image</div>
+            <div class="card" id="contact-card">
+                <h3>Contact</h3>
+                <div class="contact-icon">
+                    <a href="https://github.com/MattSouzaDev/mattsouzadev.github.io" target="_blankc"><i class="fa fa-github"></i></a>
+                    <p class="social-media-text">@MattSouzaDev</p>
+                </div>
+                <div class="contact-icon"><a href="" target="_blank"><i class="fa fa-envelope"></i></a>
+                    <p class="social-media-text">souzabusinessmatheus@gmail.com</p>
+                </div>
+                <div class="contact-icon"><a href="https://www.instagram.com/matsouza_br/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <p class="social-media-text">@matsouza_br</p>
+                </div>
+                <div class="contact-icon"><a href="#" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                    <p class="social-media-text">+55 (69) 993774231</p>
+                </div>
+
             </div>
-            <div class="card">
-                <h3>Follow Me</h3>
-                <p>Some text..</p>
-            </div>
+
         </div>
     </div>
 

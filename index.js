@@ -12,6 +12,7 @@ function scrollFunction() {
 
 const goToTop = document.getElementById("go-to-top");
 const goToBottom = document.getElementById("go-to-bottom");
+const goToContacts = document.getElementById("go-to-contacts")
 
 goToBottom.addEventListener("click", () => {
     goToTop.scrollIntoView({ behavior: "smooth", block: "end" });
@@ -19,3 +20,4 @@ goToBottom.addEventListener("click", () => {
 goToTop.addEventListener("click", () => {
     goToBottom.scrollIntoView({ behavior: "smooth", block: "start" });
 });
+
