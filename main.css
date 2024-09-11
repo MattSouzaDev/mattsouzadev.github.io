@@ -48,8 +48,7 @@ html {
 }
 
 /* Style the navbar links */
-.nava,
-#footer {
+.nava {
     float: left;
     text-transform: uppercase;
     font-weight: bold;
@@ -75,7 +74,7 @@ i {
 }
 
 /* Links on mouse-over */
-#navbar a:hover {
+#navbar a:hover, #footer {
     background-color: var(--secondColor);
     color: var(--fourthColor);
 }
@@ -93,6 +92,8 @@ i {
 
 .bgimg-1,
 .bgimg-2 {
+    display: flex;
+    justify-content: center;
     position: relative;
     background-attachment: fixed;
     background-position: center;
@@ -238,6 +239,7 @@ img {
 
 .social-media-text {
     font-size: 12px;
+    color: var(--thirdColor);
 }
 
 .contact-icon:hover {
@@ -250,14 +252,27 @@ a {
     color: inherit;
 }
 
+
 #footer {
+    margin-top: 25%;
+    overflow: hidden;
+    width: 60%;
+    position: absolute;
+    text-align: center;
+    background-color: var(--firstColor);
     box-shadow: var(--shadow-color);
+    letter-spacing: 5px;
+}
+
+#footer a {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
     padding: 20px;
     text-align: center;
     margin-top: 20px;
-    text-align: center;
 }
-
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
 
