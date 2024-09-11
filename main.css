@@ -3,7 +3,7 @@
     --firstColor: #1f1f1f;
     --secondColor: #000000;
     --thirdColor: #ab0000;
-    --fourthColor: #ffffffce;
+    --fourthColor: #e2e2e2;
     --shadow-color: 0 0 30px 40px #1f1f1f;
 
 }
@@ -13,14 +13,51 @@
     box-sizing: border-box;
 }
 
+html {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+}
+
 body,
 html {
     scroll-behavior: smooth;
     height: 100%;
-    margin: 0;
     color: var(--fourthColor);
     font-family: Arial;
     background: var(--firstColor);
+}
+
+body {
+    max-width: 80%px;
+    margin: auto;
+    padding: 10px;
+}
+
+p {
+    font-weight: 900;
+    color: var(--fourthColor);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: var(--firstColor);
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 28px "Lato", sans-serif;
+    /* 1 pixel black shadow to left, top, right and bottom */
+    text-shadow: -3px 0 var(--thirdColor), 0 1px var(--thirdColor), 3px 0 var(--thirdColor), 0 -1px var(--thirdColor);
+}
+
+h3 {
+    color: var(--thirdColor);
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }
 
 /* Create a sticky/fixed navbar */
@@ -29,16 +66,14 @@ html {
     width: 100%;
     top: 10px;
     z-index: 99;
-    position: absolute;
     text-align: center;
     background-color: var(--firstColor);
-    box-shadow: var(--shadow-color);
     letter-spacing: 5px;
     transition: 0.2s;
 }
 
 .navbarShrink {
-    float: left;
+    float: right;
     text-transform: uppercase;
     font-weight: bold;
     padding: 5px;
@@ -47,9 +82,9 @@ html {
     font-size: 12px;
 }
 
-/* Style the navbar links */
+/* Style the links tag */
 .nava {
-    float: left;
+    float: right;
     text-transform: uppercase;
     font-weight: bold;
     padding: 12px;
@@ -57,31 +92,40 @@ html {
     font-size: 18px;
 }
 
+#navbar-right {
+    width: 100%;
+}
+
 /* Style the logo */
 .logo {
-    width: 30%;
+    margin: 20px;
+    width: 40%;
     transition: 0.2s;
 }
+
 .logo1 {
+    margin: 5px;
     width: 20%;
     transition: 0.2s;
 }
 
+.div-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    bottom: 0;
+}
 
 i {
     margin-right: 10px;
     margin-left: 3px;
 }
 
-/* Links on mouse-over */
-#navbar a:hover, #footer {
+#navbar a:hover,
+#footer {
     background-color: var(--secondColor);
     color: var(--fourthColor);
-}
-
-/* Display some links to the right */
-#navbar-right {
-    float: right;
 }
 
 .row:after {
@@ -91,9 +135,8 @@ i {
 }
 
 .bgimg-1,
+.bgimg-1-2,
 .bgimg-2 {
-    display: flex;
-    justify-content: center;
     position: relative;
     background-attachment: fixed;
     background-position: center;
@@ -102,24 +145,27 @@ i {
 
 }
 
-.bgimg-1 {
+.bgimg-1,
+.bgimg-1-2 {
     opacity: 0.35;
     background-image: url("bg_img.jpg");
+    min-height: 70%;
+    box-shadow: inset 0 0 30px 20px var(--firstColor);
+}
+
+.bgimg-1-2 {
+    justify-content: center;
+    margin: auto;
+    width: 100%;
     min-height: 70%;
 }
 
 .bgimg-2 {
-    background-image: url("img_parallax2.jpg");
-    min-height: 300px;
-}
-
-
-h2,
-h3 {
-    text-align: center;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    font: 20px "Lato", sans-serif;
+    opacity: 0.6;
+    background-image: url("img_parallax.jpg");
+    min-height: 400px;
+    box-shadow: inset 0 0 30px 10px var(--firstColor);
+    border: 3px solid var(--secondColor);
 }
 
 .flip-card {
@@ -136,7 +182,6 @@ h3 {
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 3px 6px 8px 0px var(--secundary-bg);
 }
 
 .flip-card:hover .flip-card-inner {
@@ -145,7 +190,6 @@ h3 {
 
 .flip-card-front,
 .flip-card-back {
-    border-radius: 15%;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -158,14 +202,9 @@ h3 {
 }
 
 .flip-card-back {
-    border-radius: 15%;
-    background-color: var(--secondColor);
-    color: var(--fourthColor);
+    border: 3px solid #000000;
+    background-color: var(--firstColor);
     transform: rotateY(180deg);
-}
-
-img {
-    border-radius: 15%;
 }
 
 .text-container {
@@ -199,38 +238,41 @@ img {
     padding: 20px;
     margin-top: 65px;
 }
+
 #contact-card {
     text-align: center;
 }
 
 .container {
+    font-size: 12px;
+    border-radius: 15px;
     width: 100%;
 }
 
 .skills {
+    padding: 2px;
+    float: left;
+    min-height: 14px;
+    border-radius: 15px;
     text-align: right;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: white;
+    color: var(--fourthColor);
+    background-color: #ab0000;
 }
 
 .container:hover {
-    border: 2px solid var(--fourthColor);
+    border: 1px solid var(--fourthColor);
 }
 
 .html {
-    width: 90%;
-    background-color: rgb(255, 55, 5);
+    width: 60%;
 }
 
 .css {
     width: 80%;
-    background-color: rgb(33, 150, 243);
 }
 
 .js {
     width: 65%;
-    background-color: rgb(244, 225, 54);
 }
 
 .contact-icon {
@@ -254,15 +296,28 @@ a {
     color: inherit;
 }
 
+.caption {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    text-align: center;
+    color: var(--fourthColor);
+}
+
+.caption span.border {
+    font-weight: bold;
+    background-color: #000000;
+    box-shadow: 0 0 5px 10px black;
+    color: var(--fourthColor);
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 5px;
+}
 
 #footer {
-    margin-top: 25%;
-    overflow: hidden;
-    width: 60%;
-    position: absolute;
+    width: 100%;
     text-align: center;
-    background-color: var(--firstColor);
-    box-shadow: var(--shadow-color);
+    background-color: #1f1f1f6c;
     letter-spacing: 5px;
 }
 
@@ -275,21 +330,21 @@ a {
     text-align: center;
     margin-top: 20px;
 }
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
 
-    .bgimg-1,
-    .bgimg-2 {
-        background-attachment: fixed;
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1{
+        background-attachment: scroll;
     }
 
+    
     .logo {
         width: 60%;
         transition: 0.2s;
         padding-top: 10px;
     }
     .logo1 {
-        width: 40%;
+        width: 30%;
         transition: 0.2s;
     }
 
@@ -297,38 +352,39 @@ a {
         padding: 5px 3px !important;
     }
 
-    #navbar a {
-        font-size: 12px;
-        float: none;
-        display: flex;
-        text-align: left;
-    }
-
     .navbarShrink {
         text-transform: uppercase;
         font-weight: bold;
-        padding: 4px;
+        padding: 3px;
         text-decoration: none;
-        letter-spacing: 3px;
-        font-size: 6px;
+        letter-spacing: 1px;
+        font-size: 8px;
     }
 
     .nava {
         text-transform: uppercase;
         font-weight: bold;
-        padding: 12px;
+        padding: 3px;
         text-decoration: none;
-        font-size: 12px;
+        letter-spacing: 3px;
+        font-size: 11px;
     }
 
     #navbar-right {
-        float: none;
+        float: right;
     }
 
     .leftcolumn,
     .rightcolumn {
         width: 100%;
         padding: 0;
+    }
+
+    .container {
+        font-size: 13px;
+        border-radius: 15px;
+        width: 100%;
+        border: 1px solid var(--fourthColor);
     }
 
     .contact-icon {
@@ -339,6 +395,15 @@ a {
     .contact-icon:hover {
         color: var(--thirdColor);
         font-size: 32px;
-        width: fit-content;
+    }
+
+    .caption span.border {
+        font-weight: bold;
+        background-color: #000000;
+        box-shadow: 0 0 5px 10px black;
+        color: var(--fourthColor);
+        padding: 5px;
+        font-size: 12px;
+        letter-spacing: 3px;
     }
 }
