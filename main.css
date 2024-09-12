@@ -37,12 +37,20 @@ body {
 }
 
 p {
-    font-weight: 900;
     color: var(--fourthColor);
     font-family: Georgia, 'Times New Roman', Times, serif;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    font-size: 20px;
 }
-
+hr {
+    opacity: 0.5;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--fourthColor);
+    height: 1.5px;
+}
 h2 {
     color: var(--firstColor);
     text-align: center;
@@ -50,7 +58,7 @@ h2 {
     text-transform: uppercase;
     font: 28px "Lato", sans-serif;
     /* 1 pixel black shadow to left, top, right and bottom */
-    text-shadow: -3px 0 var(--thirdColor), 0 1px var(--thirdColor), 3px 0 var(--thirdColor), 0 -1px var(--thirdColor);
+    text-shadow: -2px 0 var(--thirdColor), 0 1px var(--thirdColor), 1px 0 var(--thirdColor), 0 -1px var(--thirdColor);
 }
 
 h3 {
@@ -64,7 +72,7 @@ li a {
     letter-spacing: 2px;
     display: table;
     text-align: left;
-    text-transform:capitalize;
+    text-transform: capitalize;
     padding: 10px;
     text-decoration: none;
     font-size: 14px;
@@ -90,7 +98,7 @@ li a:hover {
     float: right;
     text-transform: uppercase;
     font-weight: bold;
-    padding: 5px;
+    padding: 4px;
     text-decoration: none;
     letter-spacing: 3px;
     font-size: 12px;
@@ -114,13 +122,13 @@ li a:hover {
 .logo {
     margin: 20px;
     width: 40%;
-    transition: 0.2s;
+    transition: 0.25s;
 }
 
 .logo1 {
     margin: 5px;
     width: 20%;
-    transition: 0.2s;
+    transition: 0.25s;
 }
 
 .div-logo {
@@ -129,11 +137,6 @@ li a:hover {
     justify-content: center;
     margin: auto;
     bottom: 0;
-}
-
-i {
-    margin-right: 10px;
-    margin-left: 3px;
 }
 
 #navbar a:hover,
@@ -215,40 +218,50 @@ i {
     background-color: #bbb;
 }
 
-    /* width */
+/* width */
 ::-webkit-scrollbar {
     width: 8px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: var(--firstColor);
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: var(--thirdColor);
-    border-radius: 15px; 
-  }
-  
+}
 
-  .flip-card-back {
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--firstColor);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--thirdColor);
+    border-radius: 15px;
+}
+
+
+.flip-card-back {
     overflow-y: scroll;
     border: 3px solid #000000;
     background-color: var(--firstColor);
     transform: rotateY(180deg);
 }
 
-.text-container {
-    margin: auto;
-    max-width: 800px;
-    width: 80%;
-}
-
 .paragraph-container {
-    transition: transform .2s;
+    max-width: 80%;
+    transition: transform .5s;
     text-align: center;
     margin: 20px;
+}
+
+.paragraph-container li {
+    text-align: left;
+    letter-spacing: 2px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.paragraph-container h3 {
+    color: var(--thirdColor);
+    text-align: left;
+    margin-top: 40px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
 }
 
 .paragraph-container:hover {
@@ -304,7 +317,7 @@ i {
 }
 
 .js {
-    width: 40%;
+    width: 30%;
 }
 
 .contact-icon {
@@ -372,12 +385,13 @@ a {
         box-shadow: inset 0 0 30px 10px var(--firstColor);
         border: 3px solid var(--secondColor);
     }
-    
+
     .logo {
         width: 60%;
         transition: 0.2s;
         padding-top: 10px;
     }
+
     .logo1 {
         width: 30%;
         transition: 0.2s;
