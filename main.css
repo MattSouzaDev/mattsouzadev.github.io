@@ -137,6 +137,7 @@ i {
 .bgimg-1,
 .bgimg-1-2,
 .bgimg-2 {
+    height: 100lvh;
     position: relative;
     background-attachment: fixed;
     background-position: center;
