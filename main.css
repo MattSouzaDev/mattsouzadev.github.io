@@ -60,7 +60,21 @@ h3 {
     text-transform: uppercase;
 }
 
-/* Create a sticky/fixed navbar */
+li a {
+    letter-spacing: 2px;
+    display: table;
+    text-align: left;
+    text-transform:capitalize;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+li a:hover {
+    color: #ab0000;
+    font-size: 16px;
+}
+
 #navbar {
     overflow: hidden;
     width: 100%;
@@ -201,7 +215,25 @@ i {
     background-color: #bbb;
 }
 
-.flip-card-back {
+    /* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--firstColor);
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--thirdColor);
+    border-radius: 15px; 
+  }
+  
+
+  .flip-card-back {
+    overflow-y: scroll;
     border: 3px solid #000000;
     background-color: var(--firstColor);
     transform: rotateY(180deg);
@@ -252,7 +284,7 @@ i {
 .skills {
     padding: 2px;
     float: left;
-    min-height: 14px;
+    min-height: 13.5px;
     border-radius: 15px;
     text-align: right;
     color: var(--fourthColor);
@@ -268,11 +300,11 @@ i {
 }
 
 .css {
-    width: 80%;
+    width: 40%;
 }
 
 .js {
-    width: 65%;
+    width: 40%;
 }
 
 .contact-icon {
@@ -384,7 +416,7 @@ a {
     }
 
     .container {
-        font-size: 13px;
+        font-size: 12px;
         border-radius: 15px;
         width: 100%;
         border: 1px solid var(--fourthColor);
