@@ -154,6 +154,7 @@ li a:hover {
 .bgimg-1,
 .bgimg-1-2,
 .bgimg-2 {
+    z-index: 99;
     position: relative;
     background-attachment:fixed;
     background-position:center;
