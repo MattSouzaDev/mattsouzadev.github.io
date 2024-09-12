@@ -333,10 +333,13 @@ a {
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media only screen and (max-device-width: 1024px) {
-    .bgimg-1{
-        background-attachment: scroll;
+    .bgimg-2 {
+        opacity: 0.6;
+        background-image: url("img_parallax.jpg");
+        min-height: 400px;
+        box-shadow: inset 0 0 30px 10px var(--firstColor);
+        border: 3px solid var(--secondColor);
     }
-
     
     .logo {
         width: 60%;
